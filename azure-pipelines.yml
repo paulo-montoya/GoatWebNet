@@ -57,6 +57,7 @@ steps:
     ArtifactName: '$(Parameters.ArtifactName)'
   condition: succeededOrFailed()
 
+
 - task: fortifyvsts.hpe-security-fortify-vsts.build-task-fortify-on-demand-static.FortifyOnDemandStatic@8
   displayName: 'Run Fortify on Demand static assessment on WebGoat'
   inputs:
@@ -73,3 +74,4 @@ steps:
     RemediationScanPreference: 2
     TechnologyStackOthers: 3
     PolicyFailAction: 0
+
